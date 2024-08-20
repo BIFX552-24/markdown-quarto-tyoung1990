@@ -2,7 +2,10 @@
 title: "Learning R on iris"
 author: "Stephen Malefetsane Moerane"
 date: "29 August 2016"
-format: docx
+format: html
+theme:
+  light: flatly
+  dark: darkly
 ---
 
 \*\*This page is copied from rpubs with slight modifications for learning purposes <https://rpubs.com/moeransm/intro-iris> \*\*
