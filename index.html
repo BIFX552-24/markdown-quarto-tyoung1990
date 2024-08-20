@@ -169,7 +169,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
                 </code></pre>
 </div>
 </div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>The&nbsp;<code>summary()</code>&nbsp;function gives summary statistics for any dataset. It can also be called on one variable instead of on the whole dataset. Try&nbsp;<code>summary(iris$Sepal.Length)</code>&nbsp;and compare that with the above summaries.</p>
+</div>
+</div>
 <p>Alternatively, you may only want to know the column names of your dataset, in which case you can use&nbsp;<code>names(NameOfdataset)</code>, which in our case would look like&nbsp;<code>names(iris)</code>. Also notice that each coloumn name in the&nbsp;<code>iris</code>&nbsp;dataset has some upper case letters, which might be inconvenient to work with. You can then call the&nbsp;<code>tolower()</code>&nbsp;function on&nbsp;<code>names(iris)</code>&nbsp;to make this change. For those who might prefer upper case column names, the&nbsp;<code>toupper()</code>&nbsp;function will instead, be useful.</p>
 <p>Written packages make it easier to work with datasets than regular baseR functions. They have been optimized to be faster and more intuitive than baseR functions, therefore reducing the steepness of the R learning curve. Let's take a look;</p>
 </section>
@@ -317,22 +329,31 @@ Attaching package: 'dplyr'</code></pre>
 <h3 class="anchored" data-anchor-id="visualization"><strong>Visualization</strong></h3>
 <p>Any powerful analysis will visualize the data to give a better picture (<em>wink wink</em>) of the data. Below is a general plot of the iris dataset:</p>
 <div class="cell">
+<details>
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>&nbsp;If we're looking to plot specific variables, we can use&nbsp;<code>plot(x,y)</code>&nbsp;where&nbsp;<code>x</code>&nbsp;and&nbsp;<code>y</code>&nbsp;are the variables we're interested in.&nbsp;<code>hist()</code>&nbsp;is another useful function</p>
 <div class="cell">
+<details>
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use ?plot to read more about other arguments</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(iris<span class="sc">$</span>sepal.width, iris<span class="sc">$</span>sepal.length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
+<details>
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ?hist will give you details on more arguments</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(iris<span class="sc">$</span>sepal.width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
 </div>

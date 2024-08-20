@@ -26,7 +26,11 @@ data(iris)
 summary(iris)
 ```
 
+::: {.callout-tip}
+
 The `summary()` function gives summary statistics for any dataset. It can also be called on one variable instead of on the whole dataset. Try `summary(iris$Sepal.Length)` and compare that with the above summaries.
+
+:::
 
 Alternatively, you may only want to know the column names of your dataset, in which case you can use `names(NameOfdataset)`, which in our case would look like `names(iris)`. Also notice that each coloumn name in the `iris` dataset has some upper case letters, which might be inconvenient to work with. You can then call the `tolower()` function on `names(iris)` to make this change. For those who might prefer upper case column names, the `toupper()` function will instead, be useful.
 
@@ -117,17 +121,23 @@ This is the mean sepal.length for the virginica species. Challenge2: The standar
 Any powerful analysis will visualize the data to give a better picture (*wink wink*) of the data. Below is a general plot of the iris dataset:
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 plot(iris)
 ```
 
  If we\'re looking to plot specific variables, we can use `plot(x,y)` where `x` and `y` are the variables we\'re interested in. `hist()` is another useful function
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 # use ?plot to read more about other arguments
 plot(iris$sepal.width, iris$sepal.length)
 ```
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 # ?hist will give you details on more arguments
 hist(iris$sepal.width)
 ```
